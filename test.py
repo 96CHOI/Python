@@ -4,7 +4,7 @@ print("output : {0}".format(x) )
 
 a = 3.14
 print("float : {0}".format(a))
-print("float : {0:.1f}".format(a))
+print("float : {0:.01f}".format(a))
 ## .1f = 소숫점 한자리 표현 (.)
 
 print(type(a) )
