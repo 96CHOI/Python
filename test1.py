@@ -199,4 +199,151 @@ for i in range(1, 10) :
 for i in range(45, 110) :
     print(i)
  """
+""" 
+# 1부터 100까지 출력되는데
+# 3의 배수에서는 윤재영 출력
+# 5의 배수에서는 바보 출력
 
+for i in range(1, 101):
+    if i % 3 == 0 :
+        print("윤재영", end="")
+    if i % 5 == 0 :
+        print("바보")
+ """
+""" 
+# 파이썬 데이터 타입
+# 리스트, 튜플, 딕셔너리, 셋, 배열
+
+# list는 대괄호 []
+name = [ "장영주", "김지연19", "윤재영"]
+print(name)
+
+# 논리 타입도 가능
+data1 = ["김기원", 100, 3.14, True]
+print(data1)
+
+# 이렇게도 만들 수 있다.
+data2 = list(("최윤도", "변수정", 100))
+print(data2)
+
+print(data2[0])
+
+# 파이썬은 인데스 -1을 하면 오류가 아님
+# -1을 하면 역행하여 마지막 인덱스가 출력됨.
+print(data2[-1])
+
+data3 = ["이종빈", "윤종찬", "이지현", "장영주"]
+# 범위를 지정하여 출력 가능함 (1부터 3전까지 범위 출력)
+print(data3[1:3])
+# 범위지정 (0번 ~ 3번전 까지)
+print(data3[:3])
+# 범위지정 (2번 ~ 마지막 까지)
+print(data3[2:])
+
+# 데이터 추가
+# append
+data3.append("김지연")
+data3.append("윤재영")
+print(data3)
+# 1. 데이터 지우기
+# remove
+data3.remove("장영주")
+print(data3)
+# 2. 데이터 지우기
+# pop - 마지막 순서 데이터 지우기
+data3.pop()
+print(data3)
+# 3. 데이터 지우기
+# del - 인덱스를 통해 삭제
+del data3[2]
+print(data3)
+# 4. 데이터 지우기
+# clear 리스트 완전 삭제
+data3.clear()
+print(data3)
+"""
+""" 
+memo = ["나", "김지연", "은", "19세 남친을", "원한다"]
+for me in memo:
+    print( me, end="" )
+
+# 데이터 변경
+memo[3] = "대머리 남친을"
+print()
+for me in memo:
+    print(me, end="")
+
+# 범위를 지정해서 데이터 변경 가능
+memo[1:4] = ["장영주", "는", " 목발을 "]
+print()
+for me in memo:
+    print(me, end="")
+
+# 원하는 위치에 새로운 데이터 추가
+memo.insert(3, "드러운 어그와")
+print(memo)
+
+# 리스트 합치기
+# 첫번째리스트.extend(두번째리스트)
+memo1 = ["이종빈", "윤재영", "변수정"]
+memo2 = ["장영주부", "김지연세많음", "이지현왕언니"]
+memo1.extend(memo2)
+print(memo1)
+
+# 리스트 안에 데이터 수 구하기
+# len(리트스명)
+print( len(memo1) )
+"""
+
+# 리스트 생성
+# 1. memo = ["a", "b", "c"]
+# 2. memo = list(("짱","영","주","땡"))
+# 데이터 추가 memo.append("리정수")
+# 데이터 삽입 memo.insert(2, "김민정수리")
+# 데이터 삭제
+# 삭제데이터 지정 memo.remove("땡")
+# 마지막데이터삭제 memo.pop()
+# 인덱스로 삭제 del memo[3]
+# 리스트합치기 memo.extend(리스트)
+# 리스트 크기 len()
+# 갯수 구하기 memo.count("장")  -   장 이라는 데이터가 몇개있냐?
+# 인덱스 찾기 memo.index("영") - 영 이라는 데이터는 몇번 인덱스냐?
+# 정렬  memo.sort() - 오름차순   ,   memo.sort(reverse=True) - 내림차순
+# 반전  memo.reverse()
+# 
+
+info501 = ["장영주는 폭력적이다.", "김지연은 연하만좋아한다.", "윤재영은 옆반쌤좋아한다.",
+            "최윤도는 영주불행이 행복이다.", "수정이는 생일이라 코딩이싫데...", "종빈이는 지금 게임한다."]
+
+# 501호 딸기반 학생 이름 을 input으로 입력받기
+# info501에 해당 학생 이름이 있다면 학생의 정보를 출력하시오
+""" 
+name = input("딸기반 학생 이름 : ")
+
+
+for i in info501:
+    if i.count(name) == 1 :
+       result = "학생정보: " + str(i)
+       break
+    else:
+        result = "없는 정보입니다 다시입력해주세요."
+print(result)
+ """
+# 문제 2. info501에서 좋아한다 문구가 있는 정보들 모두 출력
+# 1번째 방법
+""" 
+a = "좋아한다"
+for i in info501:
+    if i.count(a) == 1 :
+        print(i)
+ """
+# 2번째 방법
+""" 
+word = "좋아한다"
+for info in info501 :
+    if word in info:
+        print(info)
+ """
+
+num = [x for x in range(10)]
+print(num)
