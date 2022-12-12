@@ -92,6 +92,7 @@ eng = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","
 # eng 리스트의 알파벳을 무작위 조합해서 word 리스트의 단어 중 1개이상 나오는 경우
 # 몇 번째 조합에서 나오는지 출력
 
+# 방식 1
 res = ""
 cnt = 0
 
@@ -105,4 +106,18 @@ while(True):
     res=""
 
 print(res+"가 생성되기 까지의 횟수 : "+str(cnt))
+
+# 방식2
+cnt = 0
+temp = ""
+while True:
+    word_cnt = random.randint(3,10)
+    wemp = ""
+    for i in range(word_cnt):
+        temp += random.choice(eng)
+    cnt+=1
+    if temp in word:
+        break
+
+print(temp+"    "+ str(cnt))
 
