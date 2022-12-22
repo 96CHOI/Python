@@ -63,18 +63,42 @@ html =
 # for i in li:
 #     print(i.text)
 
-url = "https://www.naver.com"
+url = "https://www.op.gg/statistics/champions"
 html = urlopen(url)
 html = html.read()
 
 bsp = bs4.BeautifulSoup(html, "html.parser")
-temp = bsp.findAll("strong",{"class","current"})
-print(temp[0].text)
-for t in temp:
-    if "현재기온" in t:
-        print(t.txt)
+# temp = bsp.findAll("strong",{"class","current"})
+# print(temp[0].text)
+# for t in temp:
+#     if "현재기온" in t:
+#         print(t.txt)
 
 # print(html)
+
+# news_ul = bsp.find("ul",{"class","type02"})
+# news_li = news_ul.findAll("li")
+
+# for li in news_li:
+#     strong = li.find("strong")
+#     print(strong.text)
+
+
+# web_div = bsp.find("div",{"class","col_selected"})
+# web_li = web_div.findAll("li")
+# for i in web_li:
+#     web_a = i.find("a", {"class","title"})
+#     print(web_a.text)
+
+
+win_td = bsp.find("th",{"class","css-1bo1int"})
+win_div = win_td.findAll("div")
+for i in win_div:
+    win_div2 = i.find("div", {"class","css-1xqka05"})
+    print(win_div2.text)
+
+
+
 
 """
 - HTTP(HTTPS -> SSL/TLS)[HTML과 JS와 CSS같은 파일을 웹 서버에게 요청하고 받아오는 프로토콜]
