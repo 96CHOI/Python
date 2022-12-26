@@ -62,8 +62,9 @@ for i in range(len(href_list)):
     for td in size_td:
         td_list.append(td.text)
 
-
+# 윤도 바ㅏㅏㅏ보 멍충이ㅣㅣㅣㅣ 뚱돼지. 아조씨 담배냄새 난대요.. 그만피세요!!!🤬
     item_list[item_name] = dict(zip(th_list, td_list))
+cur.execute( "insert into outers values('"+ a +"')" )
 print(item_list)
     
 
